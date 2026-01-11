@@ -1,28 +1,28 @@
 # Surreal Triangle Journey (Game Client)
 
-Это активная версия игры (Frontend). Написана на **p5.js**.
+This is the active version of the game (Frontend), built with **p5.js**.
 
-## Запуск
+## Running the Game
 
-Для работы игры требуется локальный веб-сервер (чтобы загружать ассеты и избежать CORS ошибок).
+You need a local web server to run the game (to load assets and avoid CORS errors).
 
-### Вариант 1 (Python)
-Находясь в корневой папке проекта:
+### Option 1 (Python)
+From the root directory:
 ```bash
 python3 -m http.server 8001 --directory surreal-triangle-journey
 ```
-Затем откройте в браузере: [http://localhost:8001](http://localhost:8001)
+Then open: [http://localhost:8001](http://localhost:8001)
 
-### Вариант 2 (VS Code Live Server)
-1. Откройте файл `index.html` в VS Code.
-2. Нажмите "Go Live" (расширение Live Server).
+### Option 2 (VS Code Live Server)
+1. Open `index.html` in VS Code.
+2. Click "Go Live" (Live Server extension).
 
-## Структура
+## Structure
 
-- **`sketch.js`**: Основная логика игры, сцены, управление.
-- **`avatarSelect.js`**: Логика экрана выбора аватара.
-- **`assets/`**: Картинки, звуки.
-- **`index.html`**: Входная точка.
+- **`sketch.js`**: Core game logic, state machine.
+- **`avatarSelect.js`**: Avatar selection screen logic.
+- **`assets/`**: Images, audio files.
+- **`index.html`**: Entry point.
 
-## Телеметрия
-Игра собирает данные о поведении игрока (время в комнатах, монеты, выбор пути) и отправляет их на Backend (Google Sheets) в конце сессии.
+## Telemetry
+The game tracks player behavior (time in rooms, coins, path choices) and sends it to the Backend (Google Sheets) at the end of the session.
