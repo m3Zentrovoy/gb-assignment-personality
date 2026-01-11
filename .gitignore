@@ -1,0 +1,20 @@
+# General
+.DS_Store
+*.log
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+venv/
+*.ipynb_checkpoints/
+
+# Node/JS
+node_modules/
+
+# Secrets & Credentials
+genie-game.json
+**/genie-game.json
+pipelines/scoring/config.py  # Check if this has secrets too, safer to ignore if unsure or template it

@@ -1,0 +1,1749 @@
+{
+  "TimeBeforeStart": {
+    "description": "Delay before initial movement",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 300",
+        "facet_effects": {
+          "Assertiveness": 1,
+          "ActivityLevel": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "300 <= x <= 2000",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 2000",
+        "facet_effects": {
+          "Anxiety": 2,
+          "SelfConsciousness": 1,
+          "Cautiousness": 1
+        }
+      }
+    }
+  },
+  "FirstPathChoice": {
+    "description": "First chosen path (foggy=risky, lit=safe, upward=challenge)",
+    "ranges": {
+      "FOGGY": {
+        "condition": "x == 'foggy'",
+        "facet_effects": {
+          "Adventurousness": 2,
+          "ExcitementSeeking": 2
+        }
+      },
+      "CLEAR": {
+        "condition": "x == 'lit'",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "Orderliness": 1
+        }
+      },
+      "CHALLENGE": {
+        "condition": "x == 'upward'",
+        "facet_effects": {
+          "AchievementStriving": 3,
+          "Assertiveness": 1,
+          "SelfDiscipline": 1
+        }
+      }
+    }
+  },
+  "DecisionTime": {
+    "description": "Time to choose a door",
+    "ranges": {
+      "FAST": {
+        "condition": "x < 1500",
+        "facet_effects": {
+          "Assertiveness": 1,
+          "ActivityLevel": 1,
+          "Anxiety": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "1500 <= x <= 6000",
+        "facet_effects": {}
+      },
+      "SLOW": {
+        "condition": "x > 6000",
+        "facet_effects": {
+          "Cautiousness": 2,
+          "Anxiety": 1
+        }
+      }
+    }
+  },
+  "CoinsRoomA": {
+    "description": "Coins collected in room A",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 1",
+        "facet_effects": {
+          "AchievementStriving": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "2 <= x <= 4",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x >= 5",
+        "facet_effects": {
+          "AchievementStriving": 2,
+          "SelfDiscipline": 1,
+          "SelfEfficacy": 1
+        }
+      }
+    }
+  },
+  "ChangedDirectionCount": {
+    "description": "Number of direction switches",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 2",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "Orderliness": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "3 <= x <= 8",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 8",
+        "facet_effects": {
+          "Immoderation": 2,
+          "ActivityLevel": 1,
+          "SelfDiscipline": -1
+        }
+      }
+    }
+  },
+  "IdleTime": {
+    "description": "Time spent not moving",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 800",
+        "facet_effects": {
+          "ActivityLevel": 1,
+          "Assertiveness": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "800 <= x <= 4000",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 4000",
+        "facet_effects": {
+          "Anxiety": 2,
+          "SelfConsciousness": 2,
+          "Cautiousness": 1,
+          "Depression": 1
+        }
+      }
+    }
+  },
+  "TilesSteppedOnTrail": {
+    "description": "Number of tiles walked in room B trail",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 10",
+        "facet_effects": {
+          "ActivityLevel": -1,
+          "AchievementStriving": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "10 <= x <= 40",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 40",
+        "facet_effects": {
+          "ActivityLevel": 2,
+          "AchievementStriving": 2,
+          "Adventurousness": 1
+        }
+      }
+    }
+  },
+  "CoinsRoomB": {
+    "description": "Coins collected in room B",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 1",
+        "facet_effects": {
+          "AchievementStriving": -1,
+          "ActivityLevel": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "2 <= x <= 4",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x >= 5",
+        "facet_effects": {
+          "AchievementStriving": 2,
+          "SelfDiscipline": 1,
+          "SelfEfficacy": 1
+        }
+      }
+    }
+  },
+  "SignificantDirectionChanges": {
+    "description": "Major directional shifts",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 3",
+        "facet_effects": {
+          "Orderliness": 1,
+          "Cautiousness": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "4 <= x <= 10",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 10",
+        "facet_effects": {
+          "Immoderation": 2,
+          "SelfDiscipline": -2,
+          "Anxiety": 1,
+          "Anger": 1
+        }
+      }
+    }
+  },
+  "InputJitterCount": {
+    "description": "Micro movement jitter count",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 5",
+        "facet_effects": {
+          "Anxiety": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "6 <= x <= 20",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 20",
+        "facet_effects": {
+          "Anxiety": 2,
+          "Vulnerability": 1,
+          "SelfConsciousness": 1,
+          "Emotionality": 5
+        }
+      }
+    }
+  },
+  "JitterIntensity": {
+    "description": "Movement instability label (smooth/slight/moderate/high)",
+    "ranges": {
+      "LOW": {
+        "condition": "x == 'smooth'",
+        "facet_effects": {
+          "Anxiety": -2
+        }
+      },
+      "MEDIUM": {
+        "condition": "x == 'slight' || x == 'moderate'",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x == 'high'",
+        "facet_effects": {
+          "Anxiety": 2,
+          "Vulnerability": 1,
+          "SelfConsciousness": 1,
+          "Emotionality": 7
+        }
+      }
+    }
+  },
+  "AvgDirectionHoldMs": {
+    "description": "Average time each movement key is held",
+    "ranges": {
+      "SHORT": {
+        "condition": "x < 120",
+        "facet_effects": {
+          "Immoderation": 2,
+          "ActivityLevel": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "120 <= x <= 300",
+        "facet_effects": {}
+      },
+      "LONG": {
+        "condition": "x > 300",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "Intellect": 1
+        }
+      }
+    }
+  },
+  "PumpsCount": {
+    "description": "Total balloon pumps during the round",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 3",
+        "facet_effects": {
+          "Cautiousness": 3
+        }
+      },
+      "MEDIUM": {
+        "condition": "4 <= x <= 8",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 8",
+        "facet_effects": {
+          "ExcitementSeeking": 2,
+          "Immoderation": 1
+        }
+      }
+    }
+  },
+  "BalloonExploded": {
+    "description": "Number of balloon bursts (risk miscalculation)",
+    "ranges": {
+      "NONE": {
+        "condition": "x == 0",
+        "facet_effects": {
+          "Cautiousness": 2,
+          "SelfDiscipline": 1
+        }
+      },
+      "SOME": {
+        "condition": "x == 1",
+        "facet_effects": {
+          "SelfEfficacy": 1
+        }
+      },
+      "FREQUENT": {
+        "condition": "x >= 2",
+        "facet_effects": {
+          "Immoderation": 2,
+          "Vulnerability": 1,
+          "ExcitementSeeking": 2
+        }
+      }
+    }
+  },
+  "CoinsCollectedBalloon": {
+    "description": "Coins gained before cashout or explosion",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 5",
+        "facet_effects": {
+          "AchievementStriving": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "5 <= x <= 15",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 15",
+        "facet_effects": {
+          "AchievementStriving": 2,
+          "ActivityLevel": 1
+        }
+      }
+    }
+  },
+  "CoinsSaved": {
+    "description": "Coins successfully cashed out (risk success)",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 3",
+        "facet_effects": {
+          "Cautiousness": -1,
+          "ExcitementSeeking": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "4 <= x <= 10",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 10",
+        "facet_effects": {
+          "SelfDiscipline": 1,
+          "Cautiousness": 2
+        }
+      }
+    }
+  },
+  "CoinsTotal": {
+    "description": "Total coins collected across all rooms",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 10",
+        "facet_effects": {
+          "AchievementStriving": -1,
+          "SelfEfficacy": -1,
+          "Depression": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "10 <= x <= 25",
+        "facet_effects": {
+          "SelfEfficacy": 2.5,
+          "Orderliness": 3
+        }
+      },
+      "HIGH": {
+        "condition": "x > 25",
+        "facet_effects": {
+          "AchievementStriving": 2,
+          "SelfDiscipline": 1,
+          "ActivityLevel": 1,
+          "SelfEfficacy": 4,
+          "Orderliness": 3
+        }
+      }
+    }
+  },
+  "NearPopRoundsWithSound": {
+    "description": "How many rounds included a near-pop + sound event",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 1",
+        "facet_effects": {
+          "Cautiousness": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "2 <= x <= 4",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x >= 5",
+        "facet_effects": {
+          "ExcitementSeeking": 1
+        }
+      }
+    }
+  },
+  "AvatarChosen": {
+    "description": "Which avatar the player selected (high-level style if you map it)",
+    "ranges": {
+      "ABSTRACT": {
+        "condition": "x == 'abstract'",
+        "facet_effects": {
+          "Imagination": 9,
+          "ArtisticInterests": 8,
+          "Intellect": 1,
+          "Liberalism": 5,
+          "Emotionality": 4
+        }
+      },
+      "SYMMETRIC": {
+        "condition": "x == 'symmetric'",
+        "facet_effects": {
+          "Orderliness": 1,
+          "Cautiousness": 1
+        }
+      },
+      "CHAOTIC": {
+        "condition": "x == 'chaotic'",
+        "facet_effects": {
+          "ExcitementSeeking": 2,
+          "Immoderation": 1
+        }
+      }
+    }
+  },
+  "AvatarChoiceTimeMs": {
+    "description": "Time needed to choose avatar",
+    "ranges": {
+      "FAST": {
+        "condition": "x < 1200",
+        "facet_effects": {
+          "Assertiveness": 3
+        }
+      },
+      "MEDIUM": {
+        "condition": "1200 <= x <= 5000",
+        "facet_effects": {}
+      },
+      "SLOW": {
+        "condition": "x > 5000",
+        "facet_effects": {
+          "SelfConsciousness": 4,
+          "Anxiety": 1,
+          "Cautiousness": 1,
+          "Modesty": 6
+        }
+      }
+    }
+  },
+  "AvatarHoverCount": {
+    "description": "How many avatars were hovered before choosing",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 2",
+        "facet_effects": {
+          "Assertiveness": 2
+        }
+      },
+      "MEDIUM": {
+        "condition": "3 <= x <= 8",
+        "facet_effects": {
+          "Imagination": 1,
+          "Liberalism": 1,
+          "ArtisticInterests": 0.5
+        }
+      },
+      "HIGH": {
+        "condition": "x > 8",
+        "facet_effects": {
+          "SelfConsciousness": 1,
+          "Imagination": 8,
+          "Liberalism": 2,
+          "ArtisticInterests": 4,
+          "Emotionality": 4
+        }
+      }
+    }
+  },
+  "AvatarClickCount": {
+    "description": "Number of clicks before final selection",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 1",
+        "facet_effects": {
+          "SelfEfficacy": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "2 <= x <= 4",
+        "facet_effects": {
+          "SelfEfficacy": 0.5
+        }
+      },
+      "HIGH": {
+        "condition": "x > 4",
+        "facet_effects": {
+          "Orderliness": 1,
+          "SelfEfficacy": 1
+        }
+      }
+    }
+  },
+  "AvatarShapeType": {
+    "description": "Geometric style of chosen avatar (raw shapes from game)",
+    "ranges": {
+      "SHARP_SHAPES": {
+        "condition": "x == 'triangle' || x == 'star' || x == 'diamond' || x == 'sharp'",
+        "facet_effects": {
+          "Assertiveness": 3
+        }
+      },
+      "CURVED_SHAPES": {
+        "condition": "x == 'circle' || x == 'round'",
+        "facet_effects": {
+          "Cooperation": 1,
+          "Friendliness": 1
+        }
+      },
+      "NEUTRAL_SHAPES": {
+        "condition": "x == 'square' || x == 'neutral'",
+        "facet_effects": {}
+      }
+    }
+  },
+  "AvatarColorCategory": {
+    "description": "Raw avatar color name from game",
+    "ranges": {
+      "BRIGHT_COLORS": {
+        "condition": "x in ['yellow','cyan','orange','lime','pink','red','green']",
+        "facet_effects": {
+          "Cheerfulness": 5,
+          "ExcitementSeeking": 1,
+          "ArtisticInterests": 9,
+          "Imagination": 7,
+          "Emotionality": 4
+        }
+      },
+      "DARK_COLORS": {
+        "condition": "x in ['purple','black','darkblue','navy','brown','gray','grey']",
+        "facet_effects": {
+          "Cheerfulness": -1,
+          "Gregariousness": -1
+        }
+      },
+      "NEUTRAL_COLORS": {
+        "condition": "else",
+        "facet_effects": {
+          "ArtisticInterests": 6,
+          "Imagination": 5,
+          "Emotionality": 2
+        }
+      }
+    }
+  },
+  "AvatarFinalHesitationMs": {
+    "description": "Final hesitation before confirming avatar",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 400",
+        "facet_effects": {
+          "Assertiveness": 3
+        }
+      },
+      "MEDIUM": {
+        "condition": "400 <= x <= 1500",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 1500",
+        "facet_effects": {
+          "SelfConsciousness": 2,
+          "Anxiety": 1,
+          "Modesty": 6
+        }
+      }
+    }
+  },
+  "RoomA_DurationSec": {
+    "description": "Time spent in room A",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 5",
+        "facet_effects": {
+          "ExcitementSeeking": 2,
+          "ActivityLevel": 1,
+          "SelfEfficacy": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "5 <= x <= 25",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 25",
+        "facet_effects": {
+          "Cautiousness": 3
+        }
+      }
+    }
+  },
+  "RoomB_DurationSec": {
+    "description": "Time spent in room B (trail + NPC interactions)",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 5",
+        "facet_effects": {
+          "ActivityLevel": 1,
+          "ExcitementSeeking": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "5 <= x <= 25",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 25",
+        "facet_effects": {
+          "Cautiousness": 3
+        }
+      }
+    }
+  },
+  "RoomC_DurationSec": {
+    "description": "Time spent in room C (balloon task area)",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 10",
+        "facet_effects": {
+          "ExcitementSeeking": 2,
+          "ActivityLevel": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "10 <= x <= 40",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 40",
+        "facet_effects": {
+          "Cautiousness": 2,
+          "SelfDiscipline": 1
+        }
+      }
+    }
+  },
+  "RoomB_NPC_Choice": {
+    "description": "Which NPC interaction was chosen (raw from game)",
+    "ranges": {
+      "FRIENDLY": {
+        "condition": "x == 'HighFive'",
+        "facet_effects": {
+          "Friendliness": 3,
+          "Gregariousness": 2,
+          "Cooperation": 2,
+          "Trust": 5,
+          "Altruism": 4,
+          "Sympathy": 3,
+          "Morality": 3
+        }
+      },
+      "AGGRESSIVE": {
+        "condition": "x == 'Push'",
+        "facet_effects": {
+          "Cooperation": -3,
+          "Friendliness": -2,
+          "Assertiveness": 2,
+          "Immoderation": 1,
+          "Anger": 3,
+          "Morality": -6,
+          "Trust": -6,
+          "Altruism": -4,
+          "Sympathy": -2
+        }
+      },
+      "IGNORED": {
+        "condition": "x == '' || x == null",
+        "facet_effects": {
+          "Friendliness": -1,
+          "Gregariousness": -2,
+          "Trust": -1,
+          "Sympathy": -1,
+          "Modesty": 4,
+          "SelfEfficacy": 2
+        }
+      }
+    }
+  },
+  "RoomB_Decision_Time": {
+    "description": "Time to decide how to interact with NPC",
+    "ranges": {
+      "FAST": {
+        "condition": "x < 1200",
+        "facet_effects": {
+          "Assertiveness": 3
+        }
+      },
+      "MEDIUM": {
+        "condition": "1200 <= x <= 5000",
+        "facet_effects": {}
+      },
+      "SLOW": {
+        "condition": "x > 5000",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "SelfConsciousness": 1,
+          "Anxiety": 1
+        }
+      }
+    }
+  },
+  "PumpCountBeforeSound_Mean": {
+    "description": "Average pumps before warning sound",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 2",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "Dutifulness": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "3 <= x <= 6",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 6",
+        "facet_effects": {
+          "ExcitementSeeking": 4,
+          "Immoderation": 1
+        }
+      }
+    }
+  },
+  "PumpSpeedBeforeSound_Mean": {
+    "description": "Average pumping speed before warning sound",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 120",
+        "facet_effects": {
+          "Cautiousness": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "120 <= x <= 250",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 250",
+        "facet_effects": {
+          "ExcitementSeeking": 3,
+          "Immoderation": 1
+        }
+      }
+    }
+  },
+  "PumpRhythmVarianceBefore_Mean": {
+    "description": "Stability of pumping rhythm before sound",
+    "ranges": {
+      "LOW_VARIABILITY": {
+        "condition": "x < 0.15",
+        "facet_effects": {
+          "SelfDiscipline": 2,
+          "Orderliness": 2,
+          "Dutifulness": 2
+        }
+      },
+      "MEDIUM_VARIABILITY": {
+        "condition": "0.15 <= x <= 0.4",
+        "facet_effects": {}
+      },
+      "HIGH_VARIABILITY": {
+        "condition": "x > 0.4",
+        "facet_effects": {
+          "Immoderation": 1,
+          "SelfDiscipline": -1,
+          "Anxiety": 1
+        }
+      }
+    }
+  },
+  "PumpSpeedAfterSound_Mean": {
+    "description": "Average pumping speed after warning cue",
+    "ranges": {
+      "SLOW": {
+        "condition": "x < 100",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "Anxiety": 1
+        }
+      },
+      "NORMAL": {
+        "condition": "100 <= x <= 220",
+        "facet_effects": {}
+      },
+      "FAST": {
+        "condition": "x > 220",
+        "facet_effects": {
+          "ExcitementSeeking": 4,
+          "Immoderation": 1
+        }
+      }
+    }
+  },
+  "PumpRhythmVarianceAfter_Mean": {
+    "description": "Stability of pumping rhythm after sound",
+    "ranges": {
+      "LOW_VARIABILITY": {
+        "condition": "x < 0.12",
+        "facet_effects": {
+          "Anxiety": -2,
+          "SelfDiscipline": 1
+        }
+      },
+      "MEDIUM_VARIABILITY": {
+        "condition": "0.12 <= x <= 0.35",
+        "facet_effects": {}
+      },
+      "HIGH_VARIABILITY": {
+        "condition": "x > 0.35",
+        "facet_effects": {
+          "Anxiety": 2,
+          "Vulnerability": 1,
+          "Immoderation": 1,
+          "Emotionality": 1
+        }
+      }
+    }
+  },
+  "ExtraPumpsAfterSound_Mean": {
+    "description": "How many extra pumps player makes after warning sound",
+    "ranges": {
+      "NONE": {
+        "condition": "x == 0",
+        "facet_effects": {
+          "Cautiousness": 3
+        }
+      },
+      "FEW": {
+        "condition": "1 <= x <= 3",
+        "facet_effects": {}
+      },
+      "MANY": {
+        "condition": "x > 3",
+        "facet_effects": {
+          "ExcitementSeeking": 1,
+          "Immoderation": 1
+        }
+      }
+    }
+  },
+  "TimeToFirstActionAfterSound_Mean": {
+    "description": "Delay before first action after sound cue",
+    "ranges": {
+      "FAST_REACTION": {
+        "condition": "x < 200",
+        "facet_effects": {
+          "Assertiveness": 1,
+          "ActivityLevel": 1
+        }
+      },
+      "NORMAL_REACTION": {
+        "condition": "200 <= x <= 700",
+        "facet_effects": {}
+      },
+      "SLOW_REACTION": {
+        "condition": "x > 700",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "Anxiety": 2,
+          "Vulnerability": 1
+        }
+      }
+    }
+  },
+  "PumpSpeedChangeRatio_Mean": {
+    "description": "Speed increase or decrease after sound (ratio)",
+    "ranges": {
+      "SPEED_DROP": {
+        "condition": "x < 0.9",
+        "facet_effects": {
+          "Anxiety": 2,
+          "Cautiousness": 1
+        }
+      },
+      "STABLE_SPEED": {
+        "condition": "0.9 <= x <= 1.15",
+        "facet_effects": {}
+      },
+      "SPEED_INCREASE": {
+        "condition": "x > 1.15",
+        "facet_effects": {
+          "ExcitementSeeking": 2,
+          "Immoderation": 1,
+          "Adventurousness": 1
+        }
+      }
+    }
+  },
+  "RhythmStabilityChange_Mean": {
+    "description": "How rhythm stability changes after sound",
+    "ranges": {
+      "MORE_STABLE": {
+        "condition": "x < -0.05",
+        "facet_effects": {
+          "SelfDiscipline": 2,
+          "Anxiety": -2,
+          "Dutifulness": 2,
+          "Orderliness": 1
+        }
+      },
+      "NO_CHANGE": {
+        "condition": "-0.05 <= x <= 0.05",
+        "facet_effects": {}
+      },
+      "LESS_STABLE": {
+        "condition": "x > 0.05",
+        "facet_effects": {
+          "Immoderation": 2,
+          "Anxiety": 1,
+          "SelfDiscipline": -1
+        }
+      }
+    }
+  },
+  "StrategyShiftFlag_Pct": {
+    "description": "Percentage of rounds where player changed strategy after sound",
+    "ranges": {
+      "NO_SHIFT": {
+        "condition": "x < 0.15",
+        "facet_effects": {
+          "SelfDiscipline": 2,
+          "Cautiousness": 1
+        }
+      },
+      "SOME_SHIFT": {
+        "condition": "0.15 <= x <= 0.5",
+        "facet_effects": {}
+      },
+      "FREQUENT_SHIFT": {
+        "condition": "x > 0.5",
+        "facet_effects": {
+          "Adventurousness": 5,
+          "Liberalism": 4,
+          "Immoderation": 1,
+          "Intellect": 1
+        }
+      }
+    }
+  },
+  "NearPopCoinsSavedAfterSound_Sum": {
+    "description": "Total coins saved after risky near-pop decisions",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 5",
+        "facet_effects": {
+          "Cautiousness": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "5 <= x <= 20",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 20",
+        "facet_effects": {
+          "Cautiousness": 2,
+          "SelfDiscipline": 1,
+          "AchievementStriving": 1
+        }
+      }
+    }
+  },
+  "NearPopCoinsLostAfterSound_Sum": {
+    "description": "Total coins lost due to explosions after sound",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 3",
+        "facet_effects": {}
+      },
+      "MEDIUM": {
+        "condition": "3 <= x <= 12",
+        "facet_effects": {
+          "ExcitementSeeking": 1
+        }
+      },
+      "HIGH": {
+        "condition": "x > 12",
+        "facet_effects": {
+          "Immoderation": 2,
+          "Anxiety": 1,
+          "Vulnerability": 1
+        }
+      }
+    }
+  },
+  "Balloon_Total_Pumps": {
+    "description": "Total balloon pumps across all rounds",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 25",
+        "facet_effects": {
+          "Cautiousness": 3
+        }
+      },
+      "MEDIUM": {
+        "condition": "25 <= x <= 45",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 45",
+        "facet_effects": {
+          "ExcitementSeeking": 4,
+          "Immoderation": 1
+        }
+      }
+    }
+  },
+  "Balloon_Explosions_Count": {
+    "description": "How many balloons exploded across all rounds",
+    "ranges": {
+      "NONE": {
+        "condition": "x == 0",
+        "facet_effects": {
+          "Cautiousness": 2,
+          "SelfDiscipline": 1
+        }
+      },
+      "SOME": {
+        "condition": "1 <= x <= 2",
+        "facet_effects": {
+          "SelfEfficacy": 1
+        }
+      },
+      "FREQUENT": {
+        "condition": "x >= 3",
+        "facet_effects": {
+          "Immoderation": 1,
+          "ExcitementSeeking": 1,
+          "Vulnerability": 1,
+          "Anger": 1,
+          "Depression": 1,
+          "Emotionality": 1
+        }
+      }
+    }
+  },
+  "Balloon_Avg_Hesitation_Ms": {
+    "description": "Average hesitation before pumping",
+    "ranges": {
+      "FAST": {
+        "condition": "x < 150",
+        "facet_effects": {
+          "Assertiveness": 2,
+          "ActivityLevel": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "150 <= x <= 500",
+        "facet_effects": {}
+      },
+      "SLOW": {
+        "condition": "x > 500",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "Anxiety": 1
+        }
+      }
+    }
+  },
+  "Balloon_Avg_Cashout_Delay_Ms": {
+    "description": "Average delay before cashing out when balloon survives",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 400",
+        "facet_effects": {
+          "Cautiousness": 3
+        }
+      },
+      "MEDIUM": {
+        "condition": "400 <= x <= 1200",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 1200",
+        "facet_effects": {
+          "ExcitementSeeking": 1
+        }
+      }
+    }
+  },
+  "Balloon_Post_Explosion_Ratio": {
+    "description": "Ratio of pumps after first explosion vs before",
+    "ranges": {
+      "NO_EXPLOSION": {
+        "condition": "x < 0",
+        "facet_effects": {}
+      },
+      "CAUTIOUS_AFTER": {
+        "condition": "0 <= x < 0.6",
+        "facet_effects": {
+          "Cautiousness": 3,
+          "Dutifulness": 2
+        }
+      },
+      "STABLE": {
+        "condition": "0.6 <= x <= 1.2",
+        "facet_effects": {}
+      },
+      "RISKIER": {
+        "condition": "x > 1.2",
+        "facet_effects": {
+          "ExcitementSeeking": 2,
+          "Immoderation": 1
+        }
+      }
+    }
+  },
+  "Balloon_Risk_Variability": {
+    "description": "Standard deviation of pumps per round",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 2",
+        "facet_effects": {
+          "SelfDiscipline": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "2 <= x <= 5",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 5",
+        "facet_effects": {
+          "Immoderation": 2,
+          "SelfDiscipline": -1
+        }
+      }
+    }
+  },
+  "RoomADurationSec": {
+    "description": "Legacy Room A duration column (alias of RoomA_DurationSec)",
+    "ranges": {
+      "ANY": {
+        "condition": "True",
+        "facet_effects": {}
+      }
+    }
+  },
+  "TotalHelpsGiven": {
+    "description": "Count of friendly/help actions (custom metric)",
+    "ranges": {
+      "LOW": {
+        "condition": "x == 0",
+        "facet_effects": {
+          "Altruism": -1,
+          "Morality": 0
+        }
+      },
+      "MEDIUM": {
+        "condition": "1 <= x <= 2",
+        "facet_effects": {
+          "Altruism": 1,
+          "Morality": 1
+        }
+      },
+      "HIGH": {
+        "condition": "x > 2",
+        "facet_effects": {
+          "Altruism": 2,
+          "Morality": 2
+        }
+      }
+    }
+  },
+  "TotalExplorationTime": {
+    "description": "Exploration time without tasks",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 10",
+        "facet_effects": {
+          "SelfEfficacy": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "10 <= x <= 30",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 30",
+        "facet_effects": {
+          "SelfEfficacy": 2,
+          "Intellect": 1,
+          "Adventurousness": 1
+        }
+      }
+    }
+  },
+  "ButtonsClicked_Total": {
+    "description": "Total UI clicks",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 20",
+        "facet_effects": {
+          "SelfEfficacy": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "20 <= x <= 80",
+        "facet_effects": {
+          "SelfEfficacy": 3,
+          "AchievementStriving": 2,
+          "Orderliness": 2
+        }
+      },
+      "HIGH": {
+        "condition": "x > 80",
+        "facet_effects": {
+          "SelfEfficacy": 4,
+          "AchievementStriving": 3,
+          "Orderliness": 2
+        }
+      }
+    }
+  },
+  "MovementSpeed_Mean": {
+    "description": "Average movement speed",
+    "ranges": {
+      "SLOW": {
+        "condition": "x < 50",
+        "facet_effects": {
+          "Orderliness": 1,
+          "Cautiousness": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "50 <= x <= 120",
+        "facet_effects": {}
+      },
+      "FAST": {
+        "condition": "x > 120",
+        "facet_effects": {
+          "ActivityLevel": 2,
+          "ExcitementSeeking": 1
+        }
+      }
+    }
+  },
+  "PathEfficiency": {
+    "description": "Shortest path / actual path ratio",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 0.7",
+        "facet_effects": {
+          "Orderliness": -1,
+          "SelfDiscipline": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "0.7 <= x <= 0.95",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 0.95",
+        "facet_effects": {
+          "Orderliness": 2,
+          "SelfDiscipline": 1
+        }
+      }
+    }
+  },
+  "RestPauses_Total": {
+    "description": "Pauses >3sec",
+    "ranges": {
+      "NONE": {
+        "condition": "x == 0",
+        "facet_effects": {
+          "SelfDiscipline": 1
+        }
+      },
+      "FEW": {
+        "condition": "x <= 2",
+        "facet_effects": {}
+      },
+      "MANY": {
+        "condition": "x > 2",
+        "facet_effects": {
+          "Vulnerability": 1,
+          "SelfConsciousness": 1
+        }
+      }
+    }
+  },
+  "RetryCount_Total": {
+    "description": "Total retry count",
+    "ranges": {
+      "LOW": {
+        "condition": "x <= 1",
+        "facet_effects": {
+          "SelfEfficacy": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "1 < x <= 4",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 4",
+        "facet_effects": {
+          "SelfEfficacy": -1,
+          "AchievementStriving": 2
+        }
+      }
+    }
+  },
+  "HelpRequests_Total": {
+    "description": "Help requests count",
+    "ranges": {
+      "NONE": {
+        "condition": "x == 0",
+        "facet_effects": {
+          "SelfEfficacy": 2,
+          "SelfDiscipline": 1
+        }
+      },
+      "FEW": {
+        "condition": "x == 1",
+        "facet_effects": {}
+      },
+      "MANY": {
+        "condition": "x > 1",
+        "facet_effects": {
+          "SelfEfficacy": -2,
+          "Vulnerability": 2
+        }
+      }
+    }
+  },
+  "TaskCompletionOrder_Efficient": {
+    "description": "1=logical order, 0=chaotic",
+    "ranges": {
+      "CHAOTIC": {
+        "condition": "x == 0",
+        "facet_effects": {
+          "Orderliness": -2,
+          "Dutifulness": -1
+        }
+      },
+      "EFFICIENT": {
+        "condition": "x == 1",
+        "facet_effects": {
+          "Orderliness": 3,
+          "Dutifulness": 3
+        }
+      }
+    }
+  },
+  "EmotionalReactions_Total": {
+    "description": "Emotional gestures/animations",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 3",
+        "facet_effects": {
+          "Emotionality": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "3 <= x <= 8",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 8",
+        "facet_effects": {
+          "Emotionality": 2,
+          "Cheerfulness": 1
+        }
+      }
+    }
+  },
+  "DialogueChoices_Cooperative": {
+    "description": "% of cooperative/help choices",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 30",
+        "facet_effects": {
+          "Trust": -1,
+          "Altruism": -1,
+          "Morality": -1
+        }
+      },
+      "MEDIUM": {
+        "condition": "30 <= x <= 70",
+        "facet_effects": {
+          "Trust": 4,
+          "Morality": 4,
+          "Altruism": 4,
+          "Sympathy": 2
+        }
+      },
+      "HIGH": {
+        "condition": "x > 70",
+        "facet_effects": {
+          "Trust": 4,
+          "Altruism": 4,
+          "Morality": 4,
+          "Sympathy": 4,
+          "Modesty": 1
+        }
+      }
+    }
+  },
+  "RiskAdjustedPumps": {
+    "description": "(Pumps / Difficulty) normalized risk",
+    "ranges": {
+      "CAUTIOUS": {
+        "condition": "x < 0.6",
+        "facet_effects": {
+          "Liberalism": -1,
+          "Intellect": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "0.6 <= x <= 1.2",
+        "facet_effects": {}
+      },
+      "RISKY": {
+        "condition": "x > 1.2",
+        "facet_effects": {
+          "Liberalism": 2,
+          "Adventurousness": 1
+        }
+      }
+    }
+  },
+  "conflict_choice_flag": {
+    "description": "Rude NPC response (1 — conflict chosen)",
+    "ranges": {
+      "YES": {
+        "condition": "x == 1",
+        "facet_effects": {
+          "Assertiveness": 2,
+          "Anger": 1,
+          "Compliance": -2,
+          "Friendliness": -1
+        }
+      },
+      "NO": {
+        "condition": "x == 0",
+        "facet_effects": {}
+      }
+    }
+  },
+  "time_to_walk_for_key_ms": {
+    "description": "Time from conflict choice to key pickup",
+    "ranges": {
+      "FAST": {
+        "condition": "x < 2000",
+        "facet_effects": {
+          "Assertiveness": 1,
+          "ActivityLevel": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "2000 <= x <= 6000",
+        "facet_effects": {}
+      },
+      "SLOW": {
+        "condition": "x > 6000",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "Anxiety": 1
+        }
+      }
+    }
+  },
+  "distance_traveled_after_conflict": {
+    "description": "Distance to key after conflict",
+    "ranges": {
+      "SHORT": {
+        "condition": "x < 300",
+        "facet_effects": {}
+      },
+      "MEDIUM": {
+        "condition": "300 <= x <= 900",
+        "facet_effects": {
+          "ActivityLevel": 1
+        }
+      },
+      "LONG": {
+        "condition": "x > 900",
+        "facet_effects": {
+          "AchievementStriving": 1,
+          "ActivityLevel": 1
+        }
+      }
+    }
+  },
+  "hesitation_before_walking_ms": {
+    "description": "Pause before first step after conflict",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 500",
+        "facet_effects": {
+          "Assertiveness": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "500 <= x <= 2000",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 2000",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "Anxiety": 1
+        }
+      }
+    }
+  },
+  "proximity_to_NPC_after_conflict": {
+    "description": "Distance to NPC when picking up key (after conflict)",
+    "ranges": {
+      "CLOSE": {
+        "condition": "x < 140",
+        "facet_effects": {
+          "Dominance": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "140 <= x <= 280",
+        "facet_effects": {}
+      },
+      "FAR": {
+        "condition": "x > 280",
+        "facet_effects": {
+          "Cautiousness": 1
+        }
+      }
+    }
+  },
+  "cooperation_choice_flag": {
+    "description": "Polite NPC response (1 — cooperation)",
+    "ranges": {
+      "YES": {
+        "condition": "x == 1",
+        "facet_effects": {
+          "Friendliness": 2,
+          "Trust": 2,
+          "Altruism": 1,
+          "Compliance": 2
+        }
+      },
+      "NO": {
+        "condition": "x == 0",
+        "facet_effects": {}
+      }
+    }
+  },
+  "time_to_door_after_cooperation": {
+    "description": "Time from polite response to door opening",
+    "ranges": {
+      "FAST": {
+        "condition": "x < 2000",
+        "facet_effects": {
+          "Efficiency": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "2000 <= x <= 6000",
+        "facet_effects": {}
+      },
+      "SLOW": {
+        "condition": "x > 6000",
+        "facet_effects": {
+          "Cautiousness": 1
+        }
+      }
+    }
+  },
+  "willingness_to_wait_for_NPC": {
+    "description": "Player stood near NPC waiting for door",
+    "ranges": {
+      "YES": {
+        "condition": "x == 1",
+        "facet_effects": {
+          "Trust": 1,
+          "Compliance": 1
+        }
+      },
+      "NO": {
+        "condition": "x == 0",
+        "facet_effects": {
+          "Autonomy": 1
+        }
+      }
+    }
+  },
+  "distance_kept_from_NPC_before_choice": {
+    "description": "Distance to NPC at moment of choice",
+    "ranges": {
+      "CLOSE": {
+        "condition": "x < 160",
+        "facet_effects": {
+          "Gregariousness": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "160 <= x <= 320",
+        "facet_effects": {}
+      },
+      "FAR": {
+        "condition": "x > 320",
+        "facet_effects": {
+          "Introversion": 1,
+          "Cautiousness": 1
+        }
+      }
+    }
+  },
+  "PumpSpeedChangeRatio_Mean": {
+    "description": "Pump speed change after signal (after/before)",
+    "ranges": {
+      "SLOWER": {
+        "condition": "x < 0.85",
+        "facet_effects": {
+          "Cautiousness": 1,
+          "SelfDiscipline": 1
+        }
+      },
+      "STEADY": {
+        "condition": "0.85 <= x <= 1.15",
+        "facet_effects": {}
+      },
+      "FASTER": {
+        "condition": "x > 1.15",
+        "facet_effects": {
+          "ExcitementSeeking": 2,
+          "Immoderation": 1
+        }
+      }
+    }
+  },
+  "RhythmStabilityChange_Mean": {
+    "description": "Rhythm stability change after signal (variance after - before)",
+    "ranges": {
+      "MORE_STABLE": {
+        "condition": "x < -2000",
+        "facet_effects": {
+          "SelfDiscipline": 1,
+          "Orderliness": 1
+        }
+      },
+      "SAME": {
+        "condition": "-2000 <= x <= 2000",
+        "facet_effects": {}
+      },
+      "LESS_STABLE": {
+        "condition": "x > 2000",
+        "facet_effects": {
+          "Impulsiveness": 1,
+          "Anxiety": 1
+        }
+      }
+    }
+  },
+  "StrategyShiftFlag_Pct": {
+    "description": "% of rounds with significant strategy shift after signal",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 20",
+        "facet_effects": {
+          "Orderliness": 1,
+          "SelfDiscipline": 1
+        }
+      },
+      "MEDIUM": {
+        "condition": "20 <= x <= 50",
+        "facet_effects": {}
+      },
+      "HIGH": {
+        "condition": "x > 50",
+        "facet_effects": {
+          "Openness": 1,
+          "ExcitementSeeking": 1,
+          "Liberalism": 1
+        }
+      }
+    }
+  },
+  "ConsistencyScore": {
+    "description": "Behavioral consistency across tasks",
+    "ranges": {
+      "LOW": {
+        "condition": "x < 0.6",
+        "facet_effects": {
+          "SelfDiscipline": -1,
+          "Orderliness": -1
+        }
+      },
+      "HIGH": {
+        "condition": "x > 0.8",
+        "facet_effects": {
+          "SelfDiscipline": 2,
+          "Orderliness": 2,
+          "AchievementStriving": 1
+        }
+      }
+    }
+  }
+}

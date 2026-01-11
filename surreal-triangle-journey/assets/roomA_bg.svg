@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Pastel meadow with hills and clouds">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b9dce7"/>
+      <stop offset="100%" stop-color="#a2cddc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <!-- clouds -->
+  <g fill="#f4eddb" opacity="0.95">
+    <path d="M120 270c110-120 280-110 360 30 90-70 200-70 290 30 150-120 310 50 310 50v120H120Z"/>
+    <path d="M960 260c130-110 280-60 350 60 80-30 170-10 220 60 120-70 230 20 270 90v140H960Z"/>
+  </g>
+  <!-- distant mountains -->
+  <path d="M-40 520c220-140 520-130 720 60 190-190 460-210 700-70 240-160 420-80 580 60v510H-40Z" fill="#8ab3be" opacity="0.55"/>
+  <path d="M-20 580c200-110 460-120 680 40 210-140 420-150 640-30 250-140 430-80 620 60v430H-20Z" fill="#7aa9b7" opacity="0.6"/>
+  <!-- tree line -->
+  <g fill="#5f9c64" opacity="0.95">
+    <path d="M-40 660c140-40 260-20 360 40 120-60 240-50 330 30 150-120 320-80 430 20 150-110 280-90 380-20 100-80 200-80 300-20v190H-40Z"/>
+  </g>
+  <!-- foreground trees -->
+  <g fill="#4d8a59" opacity="0.85">
+    <circle cx="180" cy="660" r="34"/><circle cx="240" cy="670" r="38"/><circle cx="300" cy="660" r="34"/>
+    <circle cx="520" cy="680" r="36"/><circle cx="580" cy="670" r="32"/><circle cx="640" cy="685" r="38"/>
+    <circle cx="920" cy="680" r="36"/><circle cx="980" cy="670" r="32"/><circle cx="1040" cy="685" r="38"/>
+    <circle cx="1260" cy="680" r="36"/><circle cx="1320" cy="670" r="32"/><circle cx="1380" cy="685" r="38"/>
+    <circle cx="1580" cy="680" r="36"/><circle cx="1640" cy="670" r="32"/><circle cx="1700" cy="685" r="38"/>
+  </g>
+  <!-- field layers -->
+  <path d="M-40 720c260-40 520-20 760 60 240-90 520-100 820-30 140-40 240-20 280 10v320H-40Z" fill="#86b962" opacity="0.78"/>
+  <path d="M-20 800c280-30 540-10 820 70 260-80 500-80 760-10 160-30 220-10 240 0v240H-20Z" fill="#7cb25b" opacity="0.8"/>
+  <path d="M-10 880c300-20 580 0 880 90 260-60 480-60 700 10 120-10 170 10 190 20v180H-10Z" fill="#6da44f" opacity="0.82"/>
+</svg>
