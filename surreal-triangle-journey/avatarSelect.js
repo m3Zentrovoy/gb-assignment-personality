@@ -7,31 +7,31 @@
         label: 'Triangle',
         desc: '“Sharp, quick, focused.”',
         // neutral no-color SVG
-        src: 'assets/avatars/triangle_neutral.svg' + AVATAR_ASSET_SUFFIX
+        src: 'assets/images/avatars/triangle_neutral.svg' + AVATAR_ASSET_SUFFIX
     },
     { 
         id: 'square',
         label: 'Square',
         desc: '“Solid, steady, balanced.”',
-        src: 'assets/avatars/square_neutral.svg' + AVATAR_ASSET_SUFFIX
+        src: 'assets/images/avatars/square_neutral.svg' + AVATAR_ASSET_SUFFIX
     },
     { 
         id: 'circle',
         label: 'Circle',
         desc: '“Smooth, calm, flowing.”',
-        src: 'assets/avatars/circle_neutral.svg' + AVATAR_ASSET_SUFFIX
+        src: 'assets/images/avatars/circle_neutral.svg' + AVATAR_ASSET_SUFFIX
     },
     { 
         id: 'diamond',
         label: 'Diamond',
         desc: '“Precise, bright, dynamic.”',
-        src: 'assets/avatars/diamond_neutral.svg' + AVATAR_ASSET_SUFFIX
+        src: 'assets/images/avatars/diamond_neutral.svg' + AVATAR_ASSET_SUFFIX
     },
     { 
         id: 'star',
         label: 'Star',
         desc: '“Lively, bold, expressive.”',
-        src: 'assets/avatars/star_neutral.svg' + AVATAR_ASSET_SUFFIX
+        src: 'assets/images/avatars/star_neutral.svg' + AVATAR_ASSET_SUFFIX
     }
 ];
 
